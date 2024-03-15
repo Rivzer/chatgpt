@@ -31,6 +31,9 @@
     href="https://websitedemos.net/tow-services-04/wp-content/themes/astra/assets/css/minified/main.min.css?ver=4.6.8"
     media="all" />
 
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/extra.css">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -82,8 +85,7 @@
                               class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
                               <li id="menu-item-23"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-23">
-                                <a href="/" aria-current="page"
-                                  class="menu-link">Home</a>
+                                <a href="/" aria-current="page" class="menu-link">Home</a>
                               </li>
                               <li id="menu-item-22"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a
@@ -91,8 +93,7 @@
                               </li>
                               <li id="menu-item-21"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
-                                  href="/services"
-                                  class="menu-link">Services</a></li>
+                                  href="/services" class="menu-link">Services</a></li>
                               <li id="menu-item-18"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a
                                   href="/contact" class="menu-link">Contact</a>
@@ -118,6 +119,7 @@
         <div class="ast-desktop-header-content content-align-flex-start ">
         </div>
       </div>
+
       <div id="ast-mobile-header" class="ast-mobile-header-wrap " data-type="dropdown">
         <div class="ast-main-header-wrap main-header-bar-wrap">
           <div
@@ -165,7 +167,8 @@
             </div>
           </div>
         </div>
-        <div class="ast-mobile-header-content content-align-flex-start ">
+
+        <div class="ast-mobile-header-content content-align-flex-start">
           <div
             class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item"
             data-section="section-hb-menu-1">
@@ -175,25 +178,23 @@
                   id="primary-site-navigation-mobile" aria-label="Site Navigation"
                   itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
                   <div class="main-navigation ast-inline-flex">
-                    <ul id="ast-hf-menu-1"
-                      class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile">
-                      <li
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-23">
-                        <a href="https://websitedemos.net/tow-services-04/" aria-current="page"
-                          class="menu-link">Home</a>
-                      </li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a
-                          href="https://websitedemos.net/tow-services-04/about/" class="menu-link">About</a></li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a
-                          href="https://websitedemos.net/tow-services-04/services/" class="menu-link">Services</a></li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a
-                          href="https://websitedemos.net/tow-services-04/testimonials/"
-                          class="menu-link">Testimonials</a></li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
-                          href="https://websitedemos.net/tow-services-04/faq/" class="menu-link">FAQ</a></li>
-                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a
-                          href="https://websitedemos.net/tow-services-04/contact/" class="menu-link">Contact</a></li>
-                    </ul>
+                    <!-- Voeg de Bootstrap dropdown-menu toe -->
+                    <div class="dropdown">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="https://websitedemos.net/tow-services-04/">Home</a>
+                        <a class="dropdown-item" href="https://websitedemos.net/tow-services-04/about/">About</a>
+                        <a class="dropdown-item" href="https://websitedemos.net/tow-services-04/services/">Services</a>
+                        <a class="dropdown-item"
+                          href="https://websitedemos.net/tow-services-04/testimonials/">Testimonials</a>
+                        <a class="dropdown-item" href="https://websitedemos.net/tow-services-04/faq/">FAQ</a>
+                        <a class="dropdown-item" href="https://websitedemos.net/tow-services-04/contact/">Contact</a>
+                      </div>
+                    </div>
+                    <!-- Einde Bootstrap dropdown-menu -->
                   </div>
                 </nav>
               </div>
@@ -201,13 +202,16 @@
           </div>
           <div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1"
             data-section="section-hb-button-1">
-            <div class="ast-builder-button-wrap ast-builder-button-size-"><a class="ast-custom-button-link" href="#"
-                target="_self">
+            <div class="ast-builder-button-wrap ast-builder-button-size-">
+              <a class="ast-custom-button-link" href="#" target="_self">
                 <div class="ast-custom-button">Make Appointment</div>
-              </a><a class="menu-link" href="#" target="_self">Make Appointment</a></div>
+              </a>
+              <a class="menu-link" href="#" target="_self">Make Appointment</a>
+            </div>
           </div>
         </div>
       </div>
+
     </header>
     <div id="content" class="site-content">
       <div class="ast-container">
@@ -703,219 +707,15 @@
   </div>
   <div id="showcase-cta-entry-root" class="st-customizer-cta"></div>
 
-  <script id="elementor-frontend-js-after">
-    window.scope_array = [];
-    window.backend = 0;
-    jQuery.cachedScript = function (url, options) {
-      // Allow user to set any option except for dataType, cache, and url.
-      options = jQuery.extend(options || {}, {
-        dataType: "script",
-        cache: true,
-        url: url
-      });
-      // Return the jqXHR object so we can chain callbacks.
-      return jQuery.ajax(options);
-    };
-    jQuery(window).on("elementor/frontend/init", function () {
-      elementorFrontend.hooks.addAction("frontend/element_ready/global", function ($scope, $) {
-        if ("undefined" == typeof $scope) {
-          return;
-        }
-        if ($scope.hasClass("uael-particle-yes")) {
-          window.scope_array.push($scope);
-          $scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
-        } else {
-          return;
-        }
-        if (elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0) {
-          var uael_url = uael_particles_script.uael_particles_url;
-
-          jQuery.cachedScript(uael_url);
-          window.backend = 1;
-        } else if (elementorFrontend.isEditMode()) {
-          var uael_url = uael_particles_script.uael_particles_url;
-          jQuery.cachedScript(uael_url).done(function () {
-            var flag = true;
-          });
-        }
-      });
-    });
-    jQuery(document).on("ready elementor/popup/show", () => {
-      if (jQuery.find(".uael-particle-yes").length < 1) {
-        return;
-      }
-      var uael_url = uael_particles_script.uael_particles_url;
-      jQuery.cachedScript = function (url, options) {
-        // Allow user to set any option except for dataType, cache, and url.
-        options = jQuery.extend(options || {}, {
-          dataType: "script",
-          cache: true,
-          url: url
-        });
-        // Return the jqXHR object so we can chain callbacks.
-        return jQuery.ajax(options);
-      };
-      jQuery.cachedScript(uael_url);
-    });	
-  </script>
-
   <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
     integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
     data-cf-beacon='{"rayId":"864daf8ef9d2b75e","b":1,"version":"2024.2.4","token":"974d812d4f9e465096df037cad7ee20d"}'
     crossorigin="anonymous"></script>
 
-    #557dbc
-    <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2"
-    id="wp-polyfill-inert-js"></script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0"
-    id="regenerator-runtime-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
-    id="wp-polyfill-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/dom-ready.min.js?ver=392bdd43726760d1f3ca"
-    id="wp-dom-ready-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/url.min.js?ver=b4979979018b684be209"
-    id="wp-url-js"></script>
-  <script id="showcase-cta-preview-js-js-after">
-    (window.self !== window.top) || document.write('<script src="https://websitedemos.net/tow-services-04/wp-content/plugins/astra-sites-server/dist/template-preview/main.js?ver=ae2e87f495819b6e9f4f"></scr' + 'ipt>');
-  </script>
-  <script id="starter-templates-preview-js-js-extra">
-    var starterTemplatesPreview = { "site_url": "https:\/\/websitedemos.net\/tow-services-04", "AstColorPaletteVarPrefix": "--ast-global-color-", "AstEleColorPaletteVarPrefix": ["ast-global-color-0", "ast-global-color-1", "ast-global-color-2", "ast-global-color-3", "ast-global-color-4", "ast-global-color-5", "ast-global-color-6", "ast-global-color-7", "ast-global-color-8"], "templateTheme": "astra" };
-  </script>
-  <script id="starter-templates-preview-js-js-after">
-    (window.self === window.top) || document.write('<script src="https://websitedemos.net/tow-services-04/wp-content/plugins/astra-sites-server/dist/template-preview/main.js?ver=ae2e87f495819b6e9f4f"></scr' + 'ipt>');
-  </script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.20.0"
-    id="font-awesome-4-shim-js"></script>
-    <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PW78FQ8');</script>
-    <script
-    src="https://websitedemos.net/tow-services-04/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.6.8"
-    id="astra-theme-js-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/vendor/react.min.js?ver=18.2.0"
-    id="react-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.2.0"
-    id="react-dom-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/escape-html.min.js?ver=03e27a7b6ae14f7afaa6"
-    id="wp-escape-html-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/element.min.js?ver=ed1c7604880e8b574b40"
-    id="wp-element-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1"
-    id="wp-hooks-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef"
-    id="wp-i18n-js"></script>
-  <script id="wp-i18n-js-after">
-    wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
-  </script>
-  <script id="showcase-cta-js-js-after">
-    (window.self !== window.top) || document.write('<script src="https://websitedemos.net/tow-services-04/wp-content/plugins/astra-sites-server/admin/showcase-cta/switcher/dist/main.js?ver=308d53dc52d1fcf8ca1e"></scr' + 'ipt>');
-  </script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.20.0"
-    id="elementor-webpack-runtime-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
-    id="jquery-core-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
-    id="jquery-migrate-js"></script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.20.0"
-    id="elementor-frontend-modules-js"></script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
-    id="elementor-waypoints-js"></script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2"
-    id="jquery-ui-core-js"></script>
-  <script id="elementor-frontend-js-extra">
-    var uael_particles_script = { "uael_particles_url": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/min-js\/uael-particles.min.js", "particles_url": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/lib\/particles\/particles.min.js", "snowflakes_image": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/snowflake.svg", "gift": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/gift.png", "tree": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/tree.png", "skull": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/skull.png", "ghost": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/ghost.png", "moon": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/moon.png", "bat": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/bat.png", "pumpkin": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/ultimate-elementor\/assets\/img\/pumpkin.png" };
-  </script>
-  <script id="elementor-frontend-js-before">
-    var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.20.0", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "additional_custom_breakpoints": true, "e_swiper_latest": true, "block_editor_assets_optimize": true, "ai-layout": true, "landing-pages": true, "e_image_loading_optimization": true }, "urls": { "assets": "https:\/\/websitedemos.net\/tow-services-04\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "global_image_lightbox": "yes", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 8, "title": "About%20-%20Towing%20Services%E2%80%8B", "excerpt": "", "featuredImage": false } };
-  </script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.20.0"
-    id="elementor-frontend-js"></script>
-  <script id="elementor-frontend-js-after">
-    window.scope_array = [];
-    window.backend = 0;
-    jQuery.cachedScript = function (url, options) {
-      // Allow user to set any option except for dataType, cache, and url.
-      options = jQuery.extend(options || {}, {
-        dataType: "script",
-        cache: true,
-        url: url
-      });
-      // Return the jqXHR object so we can chain callbacks.
-      return jQuery.ajax(options);
-    };
-    jQuery(window).on("elementor/frontend/init", function () {
-      elementorFrontend.hooks.addAction("frontend/element_ready/global", function ($scope, $) {
-        if ("undefined" == typeof $scope) {
-          return;
-        }
-        if ($scope.hasClass("uael-particle-yes")) {
-          window.scope_array.push($scope);
-          $scope.find(".uael-particle-wrapper").addClass("js-is-enabled");
-        } else {
-          return;
-        }
-        if (elementorFrontend.isEditMode() && $scope.find(".uael-particle-wrapper").hasClass("js-is-enabled") && window.backend == 0) {
-          var uael_url = uael_particles_script.uael_particles_url;
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-          jQuery.cachedScript(uael_url);
-          window.backend = 1;
-        } else if (elementorFrontend.isEditMode()) {
-          var uael_url = uael_particles_script.uael_particles_url;
-          jQuery.cachedScript(uael_url).done(function () {
-            var flag = true;
-          });
-        }
-      });
-    });
-    jQuery(document).on("ready elementor/popup/show", () => {
-      if (jQuery.find(".uael-particle-yes").length < 1) {
-        return;
-      }
-      var uael_url = uael_particles_script.uael_particles_url;
-      jQuery.cachedScript = function (url, options) {
-        // Allow user to set any option except for dataType, cache, and url.
-        options = jQuery.extend(options || {}, {
-          dataType: "script",
-          cache: true,
-          url: url
-        });
-        // Return the jqXHR object so we can chain callbacks.
-        return jQuery.ajax(options);
-      };
-      jQuery.cachedScript(uael_url);
-    });	
-  </script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/underscore.min.js?ver=1.13.4"
-    id="underscore-js"></script>
-  <script id="wp-util-js-extra">
-    var _wpUtilSettings = { "ajax": { "url": "\/tow-services-04\/wp-admin\/admin-ajax.php" } };
-  </script>
-  <script src="https://websitedemos.net/tow-services-04/wp-includes/js/wp-util.min.js?ver=6.4.3"
-    id="wp-util-js"></script>
-  <script id="wpforms-elementor-js-extra">
-    var wpformsElementorVars = { "captcha_provider": "recaptcha", "recaptcha_type": "v2" };
-  </script>
-  <script
-    src="https://websitedemos.net/tow-services-04/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.8.7.2"
-    id="wpforms-elementor-js"></script>
-  <script>
-    /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
-  </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
-    integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
-    data-cf-beacon='{"rayId":"864df966eeaab79d","b":1,"version":"2024.3.0","token":"974d812d4f9e465096df037cad7ee20d"}'
-    crossorigin="anonymous"></script>
 </body>
 
 
